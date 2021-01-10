@@ -2,75 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636c95a7-4ee6-4071-84d4-062bb715b274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/MarioLevelRepairer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Tiles/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/CNet_old.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/generate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/illegal_rule.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/illegal_rule_F1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/illegal_rule_F2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/illegal_rule_F3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/legal_rule.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/legal_rule_F1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/legal_rule_F2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/data/legal_rule_F3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/dict.pkl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/rule_fake.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNet/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/EA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/plt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/GAN/dcgan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/GAN/generate_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/GAN/generator.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World1-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World1-2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World1-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World2-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World2-2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World2-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World3-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World4-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World4-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World5-2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World6-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-World6-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-WorldA-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-WorldA-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-WorldB-1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-WorldB-3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/MarioBrother2/SuperMarioBros2(J)-WorldC-2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LevelText/pipes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/root.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/level_process.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CNet/data/all_elm_rule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA/clear.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA/draw_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA/repair.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GA/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/EA.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/plt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/real_time_renderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/render.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/GAN/generate_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/LevelGenerator/GAN/generate_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" beforeDir="false" afterPath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/lvl9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/level_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/level_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/visualization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,23 +61,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/GA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CNet/data" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\GA" />
-      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Experiment2" />
-      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet" />
-      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet\data" />
-      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Assets\Tiles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\LevelGenerator" />
       <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet" />
       <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet\data" />
       <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Assets\Tiles" />
       <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\CNet\data" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\GA" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\GA" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\Experiment2" />
+      <recent name="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\CNet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -137,8 +92,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.generate (1)">
-    <configuration name="EA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.draw_graph">
+    <configuration name="draw_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MarioLevelRepairer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -151,7 +106,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/EA.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/draw_graph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="EA_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="identify" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MarioLevelRepairer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -173,7 +128,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="G:\UniversityStudy\Experiment\1.9.Mario\MarioLevelRepairer\GA\EA.py" />
+      <option name="SCRIPT_NAME" value="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\GA\evaluate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="real_time_renderer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MarioLevelRepairer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -190,12 +145,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LevelGenerator/RandomDestroyed" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LevelGenerator/RandomDestroyed/generate.py" />
+      <option name="SCRIPT_NAME" value="G:\UniversityStudy\Experiment\1.9.Mario\git\MarioLevelRepairer\GA\render.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,7 +159,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="repair" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MarioLevelRepairer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -212,12 +167,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNet/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNet/data/generate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/repair.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,7 +181,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MarioLevelRepairer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -234,12 +189,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNet" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GA" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNet/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GA/run.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -250,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.generate (1)" />
-        <item itemvalue="Python.EA" />
-        <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.generate" />
-        <item itemvalue="Python.EA_v2" />
+        <item itemvalue="Python.draw_graph" />
+        <item itemvalue="Python.identify" />
+        <item itemvalue="Python.real_time_renderer" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.repair" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +224,19 @@
       <option name="presentableId" value="Default" />
       <updated>1610165198362</updated>
       <workItem from="1610165199813" duration="21146000" />
+      <workItem from="1610194918375" duration="6796000" />
+      <workItem from="1610201745223" duration="2210000" />
+      <workItem from="1610257453909" duration="4160000" />
+      <workItem from="1610263143444" duration="10147000" />
     </task>
+    <task id="LOCAL-00001" summary="upload some files">
+      <created>1610278228804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610278228822</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,21 +247,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upload some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload some files" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate_level.coverage" NAME="generate_level Coverage Results" MODIFIED="1610167933371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/GAN" />
-    <SUITE FILE_PATH="coverage/MarioLevelRepairer$test.coverage" NAME="test Coverage Results" MODIFIED="1610169133612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MarioLevelRepairer$model.coverage" NAME="model Coverage Results" MODIFIED="1610175332745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate_level.coverage" NAME="generate_level Coverage Results" MODIFIED="1610201302876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/GAN" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$GA.coverage" NAME="GA Coverage Results" MODIFIED="1610260850955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$run.coverage" NAME="run Coverage Results" MODIFIED="1610276162308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$clear.coverage" NAME="clear Coverage Results" MODIFIED="1610275915753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$EA.coverage" NAME="EA Coverage Results" MODIFIED="1610183818847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
-    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate__1_.coverage" NAME="generate (1) Coverage Results" MODIFIED="1610185254570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/RandomDestroyed" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1610182282184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$add_fake_data.coverage" NAME="add_fake_data Coverage Results" MODIFIED="1610176012265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$EA_v2.coverage" NAME="EA_v2 Coverage Results" MODIFIED="1610177369286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$identify.coverage" NAME="identify Coverage Results" MODIFIED="1610276491207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$test.coverage" NAME="test Coverage Results" MODIFIED="1610169133612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$model.coverage" NAME="model Coverage Results" MODIFIED="1610175332745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$real_time_renderer.coverage" NAME="real_time_renderer Coverage Results" MODIFIED="1610276414429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate__1_.coverage" NAME="generate (1) Coverage Results" MODIFIED="1610200139089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LevelGenerator/RandomDestroyed" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$draw_graph.coverage" NAME="draw_graph Coverage Results" MODIFIED="1610277946834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
+    <SUITE FILE_PATH="coverage/MarioLevelRepairer$repair.coverage" NAME="repair Coverage Results" MODIFIED="1610275932047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GA" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$generate.coverage" NAME="generate Coverage Results" MODIFIED="1610179232752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNet/data" />
     <SUITE FILE_PATH="coverage/MarioLevelRepairer$level_process.coverage" NAME="level_process Coverage Results" MODIFIED="1610167604122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>

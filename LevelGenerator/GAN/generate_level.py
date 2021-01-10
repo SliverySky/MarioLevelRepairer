@@ -1,19 +1,12 @@
-# This generator program expands a low-dimentional latent vector into a 2D array of Tiles.
-# Each line of input should be an array of z vectors (which are themselves arrays of floats -1 to 1)
-# Each line of output is an array of 32 levels (which are arrays-of-arrays of integer tile ids)
-
 import torch
 from torch.autograd import Variable
-
-import numpy as np
 from LevelGenerator.GAN.dcgan import Generator
-# import matplotlib.pyplot as plt
 from utils.level_process import *
 from utils.visualization import *
 from root import rootpath
 
 
-def getLevel(noise, to_string, name, size):
+def get_level(noise, to_string, name, size):
     model_to_load = name
     batch_size = 1
     image_size = 32 * size
@@ -27,13 +20,34 @@ def getLevel(noise, to_string, name, size):
         levels = generator(Variable(latent_vector))
     im = levels.data.cpu().numpy()
     im = np.argmax(im, axis=1)
-    im = littleLevel(im[0], size)
+    im = little_level(im[0], size)
     if to_string:
         return arr_to_str(im[0:14, 0:28])
     else:
         return im[0:14, 0:28]
-
+def get_random_long_level():
+    lvs = []
+    for i in range(int(120/28)):
+        lvs.append(get_level(np.random.randn(1, 32), False, './generator.pth', 1))
+    lv = np.concatenate(lvs, axis=-1)
+    lv = addLine(lv)
+    return lv
 
 if __name__ == '__main__':
-    lv = getLevel(np.random.randn(1, 32), False, './generator.pth', 1)
-    saveLevelAsImage(lv, rootpath + '\lv0')
+    lvs = []
+    total = 100
+    select = 5
+    for i in range(total):
+        lv = get_random_long_level()
+        cnt = calculate_broken_pipes(lv)
+        lvs.append((cnt, lv))
+    lvs.sort(key=lambda s:s[0], reverse=True)
+    cnt_sum = 0
+    for i in range(select):
+        saveLevelAsImage(lvs[i][1], 'Destroyed//lv'+str(i))
+        with open('Destroyed//lv'+str(i)+'.txt', 'w') as f:
+            f.write(arr_to_str(lvs[i][1]))
+        print('lv'+str(i)+': cnt=', str(lvs[i][0]))
+        cnt_sum += lvs[i][0]
+    print('avg_broken_pipe_combinations=', cnt_sum / total)
+
