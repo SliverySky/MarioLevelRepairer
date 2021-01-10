@@ -8,24 +8,6 @@ map_dic = {'X': 0, 'S': 1, '-': 2, '?': 3, 'Q': 4, 'E': 5, '<': 6, '>': 7, '[': 
 phareser = ['X', 'S', '-', '?', 'Q', 'E', '<', '>', '[', ']', 'o']
 
 
-# def getContinueData(file_name):
-#     file = open(file_name)
-#     data = file.readlines()
-#     height = len(data)
-#     width = len(data[0]) - 1  # '\n' is not included
-#     whole_level = np.empty((height, width), dtype=int, order='C')
-#     for i in range(height):
-#         for j in range(width):
-#             whole_level[i][j] = map_dic[data[i][j]]
-#     level_list = []
-#     clip_len = 28  # set width of clipped map
-#     for i in range(width // clip_len):
-#         clipped_level = whole_level[0:height, i * clip_len:(i + 1) * clip_len]
-#         clipped_level = extendLevel(clipped_level, 1)
-#         level_list.append(clipped_level.tolist())
-#     return level_list
-
-
 def getRuleData():
     names = []
     for root, dirs, files in os.walk(rootpath + '\\LevelText\\MarioBrother2'):
@@ -40,14 +22,13 @@ def getRuleData():
         for i in range(height):
             for j in range(width):
                 flag = False
-                whole_level = []
-                whole_level.append(i);
+                whole_level = [i]
                 for i1 in range(-1, 2):
                     for j1 in range(-1, 2):
                         ni = i + i1
                         nj = j + j1
-                        if (ni == i and nj == j): continue
-                        if (ni < 0 or nj < 0 or ni >= height or nj >= width):
+                        if ni == i and nj == j: continue
+                        if ni < 0 or nj < 0 or ni >= height or nj >= width:
                             whole_level.append(11)
                         else:
                             whole_level.append(map_dic[data[ni][nj]])
@@ -55,10 +36,9 @@ def getRuleData():
                                 nj] == ']'):
                                 flag = True
                 whole_level.append(map_dic[data[i][j]])
-                if (flag): rule_set.add(tuple(whole_level))
+                if flag: rule_set.add(tuple(whole_level))
     with open(rootpath+"/CNet/data/legal_rule.json", "w") as f:
         json.dump(list(rule_set), f)
-
 
 def getAllElmRuleData():
     names = []
@@ -74,14 +54,13 @@ def getAllElmRuleData():
         for i in range(height):
             for j in range(width):
                 flag = False
-                whole_level = []
-                whole_level.append(i);
+                whole_level = [i]
                 for i1 in range(-1, 2):
                     for j1 in range(-1, 2):
                         ni = i + i1
                         nj = j + j1
-                        if (ni == i and nj == j): continue
-                        if (ni < 0 or nj < 0 or ni >= height or nj >= width):
+                        if ni == i and nj == j: continue
+                        if ni < 0 or nj < 0 or ni >= height or nj >= width:
                             whole_level.append(11)
                         else:
                             whole_level.append(map_dic[data[ni][nj]])
@@ -90,10 +69,8 @@ def getAllElmRuleData():
     with open('all_elm_rule.json', "w") as f:
         json.dump(list(rule_set), f)
 
-
 def convert(ch):
     return map_dic[ch]
-
 
 # number with string
 def arr_to_str(level):
@@ -107,9 +84,8 @@ def arr_to_str(level):
             str += '\n'
     return str
 
-
-def numpy_level(str):
-    data = str.split('\n')
+def numpy_level(string):
+    data = string.split('\n')
 
     height = len(data)
     if len(data[height - 1]) == 0: height -= 1
@@ -119,24 +95,8 @@ def numpy_level(str):
         for j in range(width):
             whole_level[i][j] = map_dic[data[i][j]]
     return whole_level
-#
-#
-# def connectLevels(levelList):
-#     newLevel = [[] for i in range(len(levelList[0]))]
-#     for level in levelList:
-#         for j in range(len(level)):
-#             newLevel[j].extend(level[j])
-#     return newLevel
-#
-#
-# # add bottom and top a same line
-# def addLine(level0):
-#     level = level0.copy()
-#     level.insert(0, level[0].copy())
-#     level.append(level[len(level) - 1].copy())
-#     return level
-def random_destroy(level, p=0.2):
 
+def random_destroy(level, p=0.2):
     new_level = level.copy()
     h, w = level.shape
     for i in range(h):
@@ -153,6 +113,7 @@ def random_destroy(level, p=0.2):
                 while new_level[i][j] == prev:
                     new_level[i][j] = random.randrange(11)
     return new_level
+
 def little_level(level, size):
     height = len(level)
     width = len(level[0])
@@ -167,10 +128,10 @@ def little_level(level, size):
                     cnt[level[i * size + k][j * size + l]] += 1
             litte_level[i][j] = random.sample(list(np.where(cnt == np.max(cnt))[0]), 1)[0]
     return litte_level
+
 def addLine(lv):
     n = len(lv)
     return np.concatenate([lv[0:1], lv[0:n], lv[n-1:n]], axis=0)
-
 
 def calculate_broken_pipes(data):
     rule_file = json.load(open(rootpath + '//CNet//data//legal_rule.json'))
@@ -183,8 +144,7 @@ def calculate_broken_pipes(data):
     for i in range(height):
         for j in range(width):
             flag = False
-            info = []
-            info.append(i)
+            info = [i]
             for i1 in range(-1, 2):
                 for j1 in range(-1, 2):
                     ni = i + i1
@@ -195,7 +155,7 @@ def calculate_broken_pipes(data):
                         info.append(11)
                     else:
                         info.append(data[ni][nj])
-                        if data[ni][nj] >=6 and data[ni][nj] <= 9:
+                        if 6 <= data[ni][nj] <= 9:
                             flag = True
             info.append(data[i][j])
             info = np.array(info)

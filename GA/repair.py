@@ -1,14 +1,9 @@
 import torch
 import torch.nn.functional as F
 import copy
-import math
-import random
-import numpy
-import matplotlib.pyplot as plt
-from utils.level_process import *
 from utils.visualization import *
 from CNet.model import CNet
-from root import rootpath
+
 
 # parameter
 Threshold = 0.05
@@ -41,7 +36,6 @@ def crossOver(ind1, ind2):
             indvd2[i] = tmp
     return indvd1, indvd2
 
-
 def repairTile(ind):
     pos = []
     for item in S:
@@ -58,17 +52,18 @@ def repairTile(ind):
                 if len(pro_tile) > 0 and ind[item] not in pro_tile:
                     ind[item] = pro_tile[int(random.random() * len(pro_tile))]
 
-
 def mutation(ind):
     for item in S:
         if random.random() < P_M1:
-            if random.random() < 0.5:
-                flag, pro_tile = get_protile(ind, item[0], item[1])
-                if flag:
-                    ind[item] = pro_tile[int(random.random() * len(pro_tile))]
-            else:
-                ind[item] = origin[item[0]][item[1]]
-
+            flag, pro_tile = get_protile(ind, item[0], item[1])
+            if flag:
+                ind[item] = pro_tile[int(random.random() * len(pro_tile))]
+            # if random.random() < 0.5:
+            #     flag, pro_tile = get_protile(ind, item[0], item[1])
+            #     if flag:
+            #         ind[item] = pro_tile[int(random.random() * len(pro_tile))]
+            # else:
+            #     ind[item] = origin[item[0]][item[1]]
 
 def get_step(ind):
     cnt = 0
@@ -76,7 +71,6 @@ def get_step(ind):
         if origin[i][j] != ind[(i, j)]:
             cnt += 1
     return cnt
-
 
 def select(pop, children):
     big = []
@@ -102,19 +96,17 @@ def select(pop, children):
 
 
 def inmap(i, j):
-    if i >= 0 and i < len(origin) and j >= 0 and j < len(origin[0]):
+    if 0 <= i < len(origin) and 0 <= j < len(origin[0]):
         return True
     else:
         return False
 
-
 def update_probility(pop):
     # sty sort
     pop.sort(key=lambda x: x['fit'])
-    sum = (1 + len(pop)) * len(pop) / 2
+    total = (1 + len(pop)) * len(pop) / 2
     for i in range(len(pop)):
-        pop[i]['p'] = (i + 1) / sum
-
+        pop[i]['p'] = (i + 1) / total
 
 def random_choose_ind(pop):
     x = random.random()
@@ -125,7 +117,6 @@ def random_choose_ind(pop):
             return i
     print('not find:', cnt, x)
     return len(pop) - 1
-
 
 def evolution(isfigure, isrepair, result_path):
     figure_index = range(Iteration)  # [0, 1, 2, 4, 8, 15, 25, 40, 60, 90]
@@ -140,10 +131,10 @@ def evolution(isfigure, isrepair, result_path):
     for i, j in S:
         start[(i, j)] = origin[i][j]
     level, S1, T1 = get_mark_set(start)
-    if (isfigure):
+    if isfigure:
         saveLevelAsImage(level, result_path + "//start")
         saveAndMark(level, result_path + "//start(Remark)", T1, S1)
-        saveAndMark(level,  figure_path + "//iteration0", T1, S1)
+        saveAndMark(level, figure_path + "//iteration0", T1, S1)
     save_level_as_text(level, txt_path + "//iteration0")
     save_level_as_text(level, result_path + "//start")
     for index in range(Iteration):
@@ -155,16 +146,14 @@ def evolution(isfigure, isrepair, result_path):
             update_fitness(ind)
         for i in range(Lamda):
             for j in score[index][i].keys():
-                # print(j)
                 score[index][i][j] += pop[i][j]
-                # print(index,j,pop[i][j])
         update_probility(pop)
         children = []
         while len(children) < Lamda:
             x, y = None, None
             while True:
                 x, y = random_choose_ind(pop), random_choose_ind(pop)
-                if (x != y): break
+                if x != y: break
             x1, y1 = crossOver(pop[x], pop[y])
             children.append(x1)
             children.append(y1)
@@ -172,7 +161,7 @@ def evolution(isfigure, isrepair, result_path):
         # update score
 
         for ind in children:
-            if (random.random() < P_M0):
+            if random.random() < P_M0:
                 mutation(ind)
         if isrepair:
             for ind in children:
@@ -192,17 +181,16 @@ def evolution(isfigure, isrepair, result_path):
         for j in score[Iteration].keys():
             score[Iteration][j] += pop[i][j]'''
     level, S1, T1 = get_mark_set(best)
-    if (isfigure):
+    if isfigure:
         saveLevelAsImage(level, result_path + "//result")
         saveAndMark(level, result_path + "//result(Remark)", T1, S1)
     save_level_as_text(level, result_path + "//result")
     return best
 
-
 def get_protile(ind, i, j):
     flag = False
-    condition = []
-    condition.append(i);
+    condition = [i]
+    # condition.append(i)
     height = len(origin)
     width = len(origin[0])
     for offset in [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (1, 1)]:
@@ -215,7 +203,7 @@ def get_protile(ind, i, j):
                 tmp = ind[(ni, nj)]
             else:
                 tmp = origin[ni][nj]
-            if tmp >= 6 and tmp <= 9:
+            if 6 <= tmp <= 9:
                 flag = True
             if ni == i and nj == j:
                 continue
@@ -236,7 +224,7 @@ def get_protile(ind, i, j):
             pro_tile = []
             pro_num = []
             for i1 in range(11):
-                if (pro[i1] >= Threshold):
+                if pro[i1] >= Threshold:
                     pro_tile.append(i1)
                     pro_num.append(pro[i1])
             hash_map[tuple(condition)] = pro_tile
@@ -244,10 +232,8 @@ def get_protile(ind, i, j):
     else:
         return False, []
 
-
 def fitness_fuction(pro_sum, error_sum, step):
     return pro_sum + 5 * error_sum + 3 * step
-
 
 def initial():
     global P_M1
@@ -262,7 +248,6 @@ def initial():
                     # print(i,j)
     print("#S=", len(S))
     P_M1 = 1 / len(S)
-
 
 def initpop():
     pop = []
@@ -285,7 +270,6 @@ def initpop():
         repairTile(pop[i])
     return pop
 
-
 def update_fitness(ind):
     pro_sum = 0
     error_sum = 0
@@ -295,7 +279,7 @@ def update_fitness(ind):
         if flag:
             if (ind[(i, j)] in pro_tile) and len(pro_tile) > 1:
                 pro_sum += len(pro_tile)
-            elif (ind[(i, j)] not in pro_tile):
+            elif ind[(i, j)] not in pro_tile:
                 error_sum += 1
                 pro_sum += len(pro_tile)
 
@@ -303,8 +287,6 @@ def update_fitness(ind):
     ind['value'] = pro_sum
     ind['replace'] = get_step(ind)
     ind['fit'] = fitness_fuction(pro_sum, error_sum, ind['replace'])
-    # print(ind['wrong'],ind['value'],ind['replace'])
-
 
 def get_mark_set(ind):
     S1 = []
@@ -317,17 +299,9 @@ def get_mark_set(ind):
         if flag:
             if (ind[(i, j)] in pro_tile) and len(pro_tile) > 1:
                 S1.append((i, j))
-            elif (ind[(i, j)] not in pro_tile):
+            elif ind[(i, j)] not in pro_tile:
                 T1.append((i, j))
     return level, S1, T1
-
-
-def repair(best):
-    level = copy.deepcopy(origin)
-    for i, j in S:
-        level[i][j] = best[(i, j)]
-    return level
-
 
 def GA(net_name, lv_name, result_path, isfigure=True, isrepair=True):
     global origin
@@ -341,7 +315,7 @@ def GA(net_name, lv_name, result_path, isfigure=True, isrepair=True):
         for j in range(Lamda):
             one.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
         score.append(one)
-    # with open(rootpath + "//LevelGenerator//RandomDestroyed//lv"+str(1)+".txt") as f:
+
     lv_str = ''
     with open(lv_name) as f:
         for i in f.readlines():
@@ -349,91 +323,7 @@ def GA(net_name, lv_name, result_path, isfigure=True, isrepair=True):
 
     whole_level = numpy_level(lv_str)
     origin = whole_level
-    best = evolution(isfigure, isrepair, result_path)
-    repair_lv = repair(best)
-    #saveLevelAsImage(whole_level, result_path + "//origin")
-    #saveLevelAsImage(repair_lv, result_path + "//result")
+    evolution(isfigure, isrepair, result_path)
     with open(result_path + "//json//data.json", 'w') as f:
         json.dump(score, f)
     return score
-
-# above is for two graph
-# score = []
-# bestScore = []
-# for i in range(Iteration):
-#     score.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
-#     bestScore.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
-# for k in range(Total):
-#     with open("./repair_mario_damage2.txt") as f:
-#         data = f.readlines()
-#         lv_str=''
-#         for i in data:
-#             lv_str+=i
-#     print(lv_str)
-#     print()
-#     whole_level=numpyLevel(lv_str)
-#     origin = whole_level
-#     best = evolution(isrepair=False)
-#     repair_lv = repair(best)
-#     saveLevelAsImage(repair_lv, "figure\\v1")
-#
-# drawPic(Total,isBest=True)
-# score = []
-# bestScore = []
-# for i in range(Iteration):
-#     score.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
-#     bestScore.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
-# for k in range(Total):
-#     with open("./repair_mario_damage2.txt") as f:
-#         data = f.readlines()
-#         lv_str = ''
-#         for i in data:
-#             lv_str += i
-#     print(lv_str)
-#     print()
-#     whole_level = numpyLevel(lv_str)
-#     origin = whole_level
-#     best = evolution(isrepair=True)
-#     repair_lv = repair(best)
-#     saveLevelAsImage(repair_lv, "figure\\v1_r")
-#
-# drawPic2(Total,isBest=True)
-# plt.show()
-#     saveLevelAsImage(repair_lv,"fig3\\final")
-#     with open("./Experiment1/repair/size"+name+"/lvl"+str(lv_i)+"_net"+str(model_i)+".txt","w") as f:
-#         f.write(String(repair_lv))
-#     print(String(repair_lv))
-
-
-# import level
-# model_name=['1']
-# for name in model_name:
-#     for model_i in range(1,11):
-#         print("start:",name,model_i)
-#         #net=torch.load("ruleNet_new.pkl")
-#         type_name="./C_net/Entropy/size"+name+"/ruleNet_"+str(model_i)+"_sz"+name+"_t4000.pkl"
-#         net = torch.load(type_name)
-#         print(type_name)
-#         for lv_i in range(1,11):
-#             score=[]
-#             for i in range(Iteration):
-#                 one = []
-#                 for j in range(Lamda):
-#                     one.append({"fit": 0, "value": 0, "replace": 0, "wrong": 0})
-#                 score.append(one)
-#             with open("./Experiment1/destroyed/lvl"+str(lv_i)+".txt") as f:
-#                 data = f.readlines()
-#                 lv_str=''
-#                 for i in data:
-#                     lv_str+=i
-#             print(lv_str)
-#             print()
-#             whole_level=numpyLevel(lv_str)
-#             picture_name="here"
-#             origin = whole_level
-#             best = evolution(isrepair=True)
-#             repair_lv = repair(best)
-#             #saveLevelAsImage(repair_lv,"fig3\\final")
-#             with open("./Experiment1/repair/entropy/0.3"+"/lvl"+str(lv_i)+"_net"+str(model_i)+".txt","w") as f:
-#                 f.write(String(repair_lv))
-#             print(String(repair_lv))

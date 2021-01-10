@@ -1,9 +1,6 @@
-from root import rootpath
-from utils.visualization import *
-from utils.level_process import *
 from GA.repair import *
-import time
-import subprocess
+
+
 if __name__ == '__main__':
     render_path = rootpath + "//GA//real_time_renderer.py"
     net_name = rootpath + "//CNet//dict.pkl"

@@ -1,7 +1,5 @@
 import PIL.Image as Image
-import os
 from PIL import ImageDraw
-from root import rootpath
 from utils.level_process import *
 IMAGES_PATH = rootpath + '/Assets/Tiles'
 IMAGES_FORMAT = ['.jpg', '.JPG', '.PNG', '.png']
@@ -9,7 +7,6 @@ IMAGE_SIZE = 16
 
 image_names = [name for name in os.listdir(IMAGES_PATH) for item in IMAGES_FORMAT if
                os.path.splitext(name)[1] == item]
-
 
 def saveLevelAsImage(level, path):
     IMAGE_ROW = len(level)
@@ -21,7 +18,6 @@ def saveLevelAsImage(level, path):
                 (IMAGE_SIZE, IMAGE_SIZE), Image.ANTIALIAS)
             to_image.paste(from_image, ((x - 1) * IMAGE_SIZE, (y - 1) * IMAGE_SIZE))
     return to_image.save(path + ".jpg")
-
 
 def saveAndMark(level, name, S, T):
     IMAGE_ROW = len(level)
@@ -53,6 +49,7 @@ def saveAndMark(level, name, S, T):
                 draw.line(rt + rb, fill=(0, 0, 255), width=3)
                 draw.line(lb + rb, fill=(0, 0, 255), width=3)
     to_image.save(name + ".jpg")
+
 def save_level_as_text(level, name):
     with open(name+".txt", 'w') as f:
         f.write(arr_to_str(level))
