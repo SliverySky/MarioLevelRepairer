@@ -25,4 +25,4 @@ you can run data/generate.py to generate train and test data. "model.py" is for 
 2. run "render.py" to visualize the repair process. "space" to stop playing. When you  stop playing, you can use "left arrow" and "right arrow" to control.
 3. run "draw_graph.py" to draw the graph from repair results.
 4. run "evaluate.py" to see how many true(wrong) tiles was changed to true(wrong) tiles after repair.
-
+5. when you start a new repair, you can run "clear.py" to clear the old result.
