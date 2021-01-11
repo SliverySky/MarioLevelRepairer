@@ -1,8 +1,9 @@
 import torch
 import json
 import torch.nn.functional as F
+from CNet.model import CNet     # Don't delete it
 
-net = torch.load("dict.pkl")
+net = torch.load("dict.pkl").to("cpu")
 
 
 def cal(name):

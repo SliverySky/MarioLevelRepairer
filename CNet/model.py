@@ -20,23 +20,19 @@ class CNet(torch.nn.Module):
 
 
 if __name__ == '__main__':
-    rule_level = json.load(open("./data/rule.json"))
-    batch_size = 1
+    rule_level = json.load(open("./data/legal_rule.json"))
+    batch_size = 32
     total = 4000
     USEGPU = True
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print(device)
+    device = torch.device("cuda:0" if torch.cuda.is_available() and USEGPU else "cpu")
     gpus = [0]
     cnet_num = 1
+
     for t in range(cnet_num):
         net = CNet(12 * 8 + 1, 200, 100, 12)
+        net = net.to(device)
         optimizer = torch.optim.SGD(net.parameters(), lr=0.01)
-
         loss_func = torch.nn.CrossEntropyLoss()
-        input = torch.zeros(batch_size, 97, dtype=torch.float32)
-        target = torch.zeros(batch_size, 12, dtype=torch.float32)
-        input = input.to(device)
-        target = target.to(device)
         data1 = []
         data2 = []
         for i in range(len(rule_level)):
@@ -56,7 +52,9 @@ if __name__ == '__main__':
             sum = 0
             for j in range(len(rule_level) // batch_size):
                 input = Variable(torch.tensor(data1[batch_size * j:batch_size * (j + 1)]).float(), requires_grad=True)
+                input = input.to(device)
                 target = Variable(torch.LongTensor(data2[batch_size * j:batch_size * (j + 1)]))
+                target = target.to(device)
                 optimizer.zero_grad()
                 input = net(input)
                 loss = loss_func(input, target)
@@ -66,6 +64,6 @@ if __name__ == '__main__':
                     sum += loss.cpu().detach().numpy()
                 else:
                     sum += loss.detach().numpy()
-            print("\rNet", t + 1, "(size=", batch_size, ")iter=", i, "/", total, end='')
+            print("\rNet", t + 1, "(size=", batch_size, ")iter=", i+1, "/", total, end='')
             print("     loss=", sum)
         torch.save(net, "dict.pkl")
