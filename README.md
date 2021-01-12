@@ -33,9 +33,13 @@ Requirments to run this project and their version we used are as follow:
 ​	pygame    (2.0.1)
 
 ### How to use
-
-1. **Generate Data for CNet**: Run "*CNet/data/generate.py*".
-2. **Train/Test CNet**: Run "*CNet/model.py*" to train CNet and run "*CNet/test.py*" to test the model. Please make sure the data is generated already.
-3. **Generate levels to repair**: You can run "RandomDestroyed/generate.py" to generate random destroyed levels for the further test. As we mension in the paper, GAN will generate broken pipes sometimes. We prepared a trained GAN model in "*LevelGeneratir/GAN/generator.pth*". You can run "*LevelGenerator/generate_level.py*"  to generate some levels by GAN to see how many defective level will it generate.  
-4. **Run GA to repair level**: Run "*GA/run.py*" to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
-5. **Result Visulization:** Run "draw_graph.py" to draw the graph from repair results. Run "evaluate.py" to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. Waht's more, you can run "render.py" to see the visuliized repair progress.
+1. **Enter the root path**
+2. **Generate Data for CNet**
+    Run ```python CNet/data/generate.py```.
+2. **Train/Test CNet**:
+   To train CNet, run ```python CNet/model.py```.
+   To test the model, run ```python CNet/test.py``` to test the model. Please make sure the data is generated already.
+3. **Generate levels to repair**: 
+   Run ```RandomDestroyed/generate.py``` to generate random destroyed levels for the further test. As we mentioned in the paper, GAN will generate broken pipes sometimes. We prepared a trained GAN model in "*LevelGeneratir/GAN/generator.pth*". You can run ```python LevelGenerator/generate_level.py```  to generate some levels by GAN to see how many defective level will it generate.  
+4. **Run GA to repair level**: Run ```python GA/run.py``` to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
+5. **Result Visulization:** Run ```python draw_graph.py``` to draw the graph from repair results. Run ```python evaluate.py``` to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. Waht's more, you can run ```python render.py``` to see the visuliized repair progress.
