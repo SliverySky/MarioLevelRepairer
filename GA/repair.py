@@ -309,7 +309,7 @@ def GA(net_name, lv_name, result_path, isfigure=True, isrepair=True):
     global origin
     global net
     global score
-    net = torch.load(net_name)
+    net = torch.load(net_name).to("cpu")
     net.eval()
     score = []
     for i in range(Iteration):
