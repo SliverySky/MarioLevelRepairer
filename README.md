@@ -1,7 +1,8 @@
 # A Novel CNet-assisted Evolutionary Level Repairer  
-
+'''T. Shu, Z. Wang, J. Liu and X. Yao, "A Novel CNet-assisted Evolutionary Level Repairer and Its Applications to Super Mario Bros," 2020 IEEE Congress on Evolutionary Computation (CEC), Glasgow, United Kingdom, 2020, pp. 1-10, doi: 10.1109/CEC48606.2020.9185538.
 Applying latent variable evolution to game level design has become more and more popular as little human expert knowledge is required. However, defective levels with illegal
-patterns may be generated due to the violation of constraints forlevel design. A traditional way of repairing the defective levelsis programming specific rule-based repairers to patch the flaw.
+patterns may be generated due to the violation of constraints forlevel design. A traditional way of repairing the defective levelsis programming specific rule-based repairers to patch the flaw.'''
+
 However, programming these constraints is sometimes complex and not straightforward. An autonomous level repairer which is capable of learning the constraints is needed. In this project, we use a novel approach, CNet, to learn the probability distribution of tiles giving its surrounding tiles on a set of real levels, and then detect the illegal tiles in generated new levels. Then, an evolutionary repairer is designed to search for optimal replacement schemes equipped with a novel search space being constructed with the help of CNet and a novel heuristic function. The proposed approaches are proved to be effective in our case study of repairing GAN-generated and artificially destroyed levels of Super Mario Bros. game. Our CNet-assisted evolutionary repairer can also be easily applied to other games of which the levels can be represented by a matrix of objects or tiles.  
 
 For more information, please see the following publication. This publication should also be cited if code from this project is used in any way:
