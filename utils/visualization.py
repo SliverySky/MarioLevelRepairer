@@ -1,3 +1,5 @@
+import sys,os
+sys.path.append(os.path.dirname(sys.path[0]))
 import PIL.Image as Image
 from PIL import ImageDraw
 from utils.level_process import *
