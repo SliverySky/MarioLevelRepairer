@@ -1,5 +1,6 @@
 import sys,os
-sys.path.append(os.path.dirname(sys.path[0]))
+sys.path.append(sys.path[0]+'//..'+'//..')
+os.chdir(sys.path[0])
 from utils.visualization import *
 
 
@@ -11,6 +12,7 @@ if __name__ == '__main__':
             lv_str += i
     lv = numpy_level(lv_str)
     for i in range(num):
+        print('generate ',i)
         new_lv = random_destroy(lv)
         with open('lv'+str(i)+'.txt', 'w') as f:
             f.write(arr_to_str(new_lv))

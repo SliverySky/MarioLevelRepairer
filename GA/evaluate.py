@@ -1,5 +1,6 @@
 import sys,os
 sys.path.append(os.path.dirname(sys.path[0]))
+os.chdir(sys.path[0])
 from utils.level_process import *
 import numpy as np
 from root import rootpath

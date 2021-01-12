@@ -1,3 +1,5 @@
+import os,sys
+os.chdir(sys.path[0])
 import matplotlib.pyplot as plt
 import json
 
