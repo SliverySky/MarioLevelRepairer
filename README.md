@@ -7,10 +7,14 @@ However, programming these constraints is sometimes complex and not straightforw
 For more information, please see the following publication. This publication should also be cited if code from this project is used in any way:
 
 ```
-@INPROCEEDINGS{
+@INPROCEEDINGS{shu2020novel,
+  title={A Novel CNet-assisted Evolutionary Level Repairer and Its Applications to Super Mario Bros},
+  author={Shu, Tianye and Wang, Ziqi and Liu, Jialin and Yao, Xin},
   booktitle={2020 IEEE Congress on Evolutionary Computation (CEC)}, 
-  doi={10.1109/CEC48606.2020.9185538}
- }
+  doi={10.1109/CEC48606.2020.9185538},
+  pages={1-10},
+  year={2020}
+}
 ```
 
 You can also find the pdf for free from https://arxiv.org/abs/2005.06148
