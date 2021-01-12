@@ -1,3 +1,5 @@
+import sys,os
+sys.path.append(os.path.dirname(sys.path[0]))
 import random
 from utils.level_process import getRuleData
 import json
