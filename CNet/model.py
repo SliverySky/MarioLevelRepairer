@@ -1,3 +1,5 @@
+import sys,os
+sys.path.append(os.path.dirname(sys.path[0]))
 import torch
 from torch.autograd import Variable
 import torch.nn.functional as F
