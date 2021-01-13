@@ -32,14 +32,13 @@ Requirments to run this project and the tested version are as follow:
 * pygame (2.0.1)
 
 ## Project structure
-* **Assets/Tiles**:
-* **CNET** folder:
-* **GA** folder:
-* **LevelGenerator** folder:
-* **LevelText** folder:
-* **utiles** folder:
-* **root.py**:
-* **test.py**:
+* **Assets/Tiles**: contains resources to render the level
+* **CNET** folder: contains codes about CNet	* **CNET** folder: contains codes about CNet
+* **GA** folder: repairs defective levels by Genetic Algorithm	* **GA** folder: repairs defective levels by Genetic Algorithm
+* **LevelGenerator** folder: generates defective levels (from GAN or random destroyed)	* **LevelGenerator** folder: generates defective levels (from GAN or random destroyed)
+* **LevelText** folder: contains mario level text  	* **LevelText** folder: contains mario level text  
+* **utiles** folder: contains commonly used methods	* **utiles** folder: contains commonly used methods
+* **root.py**: use to get root path	* **root.py**: use to get root path
 
 ## How to use
 ### Quick start without re-training
