@@ -33,14 +33,13 @@ Requirments to run this project and the tested version are as follow:
 
 
 ## Project structure
-* **Assets/Tiles**:contains resources to render the level
+* **Assets/Tiles**: contains resources to render the level
 * **CNET** folder: contains codes about CNet
 * **GA** folder: repairs defective levels by Genetic Algorithm
 * **LevelGenerator** folder: generates defective levels (from GAN or random destroyed)
 * **LevelText** folder: contains mario level text  
 * **utiles** folder: contains commonly used methods
 * **root.py**: use to get root path
-* **test.py**: 
 
 ## How to use
 
