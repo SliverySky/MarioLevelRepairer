@@ -77,7 +77,7 @@ The generated data will be located in the folder ***./CNet/data/***.
 
 ```python LevelGenerator/RandomDestroyed/generate.py```
 
-```python LevelGenerator/GAN/generator.pth```
+```python LevelGenerator/GAN/generate_level.py```
 
 * **Run GA to repair level**: Run ***GA/run.py*** to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
 
