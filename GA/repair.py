@@ -1,3 +1,5 @@
+import sys,os
+sys.path.append(os.path.dirname(sys.path[0]))
 import torch
 import torch.nn.functional as F
 import copy
@@ -307,7 +309,7 @@ def GA(net_name, lv_name, result_path, isfigure=True, isrepair=True):
     global origin
     global net
     global score
-    net = torch.load(net_name)
+    net = torch.load(net_name).to("cpu")
     net.eval()
     score = []
     for i in range(Iteration):

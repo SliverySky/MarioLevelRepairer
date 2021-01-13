@@ -31,6 +31,7 @@ Requirments to run this project and the tested version are as follow:
 
 * pygame (2.0.1)
 
+
 ## Project structure
 * **Assets/Tiles**:
 * **CNET** folder:

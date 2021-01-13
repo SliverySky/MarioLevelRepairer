@@ -1,3 +1,6 @@
+import sys,os
+sys.path.append(sys.path[0]+'//..'+'//..')
+os.chdir(sys.path[0])
 import torch
 from torch.autograd import Variable
 from LevelGenerator.GAN.dcgan import Generator
@@ -38,11 +41,13 @@ if __name__ == '__main__':
     total = 100
     select = 5
     for i in range(total):
+        print('\rgenerate',i,end='')
         lv = get_random_long_level()
         cnt = calculate_broken_pipes(lv)
         lvs.append((cnt, lv))
     lvs.sort(key=lambda s:s[0], reverse=True)
     cnt_sum = 0
+    print()
     for i in range(select):
         saveLevelAsImage(lvs[i][1], 'Destroyed//lv'+str(i))
         with open('Destroyed//lv'+str(i)+'.txt', 'w') as f:

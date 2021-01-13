@@ -1,9 +1,13 @@
+import sys,os
+sys.path.append(os.path.dirname(sys.path[0]))
+os.chdir(sys.path[0])
 import torch
 import json
 import torch.nn.functional as F
 from CNet.model import CNet     # Don't delete it
+from root import rootpath
 
-net = torch.load("dict.pkl").to("cpu")
+net = torch.load(rootpath + "//CNet//dict.pkl").to("cpu")
 
 
 def cal(name):
