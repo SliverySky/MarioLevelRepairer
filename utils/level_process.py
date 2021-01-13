@@ -12,9 +12,9 @@ phareser = ['X', 'S', '-', '?', 'Q', 'E', '<', '>', '[', ']', 'o']
 
 def getRuleData():
     names = []
-    for root, dirs, files in os.walk(rootpath + '\\LevelText\\MarioBrother2'):
+    for root, dirs, files in os.walk(rootpath + '//LevelText//MarioBrother2'):
         for fl in files:
-            names.append(rootpath + '\\LevelText\\MarioBrother2\\' + fl)
+            names.append(rootpath + '//LevelText//MarioBrother2//' + fl)
     rule_set = set()
     for file_name in names:
         file = open(file_name)
@@ -44,9 +44,9 @@ def getRuleData():
 
 def getAllElmRuleData():
     names = []
-    for root, dirs, files in os.walk(rootpath + '\\Level\\MarioBrother2'):
+    for root, dirs, files in os.walk(rootpath + '//Level//MarioBrother2'):
         for fl in files:
-            names.append(rootpath + '\\Level\\MarioBrother2\\' + fl)
+            names.append(rootpath + '//Level//MarioBrother2//' + fl)
     rule_set = set()
     for file_name in names:
         file = open(file_name)
