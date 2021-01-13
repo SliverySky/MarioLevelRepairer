@@ -75,9 +75,9 @@ The generated data will be located in the folder ***./CNet/data/***.
 
 * **Generate levels to repair**: You can run ***RandomDestroyed/generate.py*** to generate random destroyed levels for the further test. As we mension in the paper, GAN will generate broken pipes sometimes. We prepared a trained GAN model in ***LevelGeneratir/GAN/generator.pth***. You can run ***LevelGenerator/generate_level.py*** to generate some levels by GAN to see how many defective level will it generate.  
 
-```python LevelGeneratir/RandomDestroyed/generate.py```
+```python LevelGenerator/RandomDestroyed/generate.py```
 
-```python LevelGeneratir/GAN/generator.pth```
+```python LevelGenerator/GAN/generator.pth```
 
 * **Run GA to repair level**: Run ***GA/run.py*** to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
 
