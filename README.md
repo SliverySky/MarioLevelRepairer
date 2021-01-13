@@ -31,22 +31,25 @@ Requirments to run this project and the tested version are as follow:
 
 * pygame (2.0.1)
 
-
-## Project structure
-* **Assets/Tiles**:
-* **CNET** folder:
-* **GA** folder:
-* **LevelGenerator** folder:
-* **LevelText** folder:
-* **utiles** folder:
-* **root.py**:
-* **test.py**:
-
 ## How to use
+### Quick start without re-training
+The generated data and trained model is given in this project. You can run the repairer and visualise the results directly by the following steps.
+* **Run GA to repair level**: Run ***GA/run.py*** to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
 
+```python GA/run.py```
+
+```python GA/clear.py```
+
+* **Result Visulization:** Run ***draw_graph.py*** to draw the graph from repair results. Run ***evaluate.py*** to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. What's more, you can run "render.py" to see the visuliized repair progress.
+
+```python draw_graph.py```
+
+### Start from the very beginning (data generation, model training)
 * **Generate Data for CNet**: 
 
 ```python CNet/data/generate.py```
+
+The generated data will be located in the folder ***./CNet/data/***.
 
 * **Train/Test CNet**: Run ***CNet/model.py*** to train CNet and run ***CNet/test.py*** to test the model. Please make sure the data is generated already.
 
@@ -69,3 +72,257 @@ Requirments to run this project and the tested version are as follow:
 * **Result Visulization:** Run ***draw_graph.py*** to draw the graph from repair results. Run ***evaluate.py*** to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. What's more, you can run "render.py" to see the visuliized repair progress.
 
 ```python draw_graph.py```
+
+## Project structure
+* **Assets/Tiles**:
+* **CNET** folder:
+* **GA** folder:
+* **LevelGenerator** folder:
+* **LevelText** folder:
+* **utiles** folder:
+* **root.py**:
+* **test.py**:
+
+.
+├── Assets
+│   ├── Tiles
+│   │   ├── 0.jpg
+│   │   ├── 1.jpg
+│   │   ├── 10.jpg
+│   │   ├── 2.jpg
+│   │   ├── 3.jpg
+│   │   ├── 4.jpg
+│   │   ├── 5.jpg
+│   │   ├── 6.jpg
+│   │   ├── 7.jpg
+│   │   ├── 8.jpg
+│   │   └── 9.jpg
+│   └── __init__.py
+├── CNet
+│   ├── CNet_old.pkl
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-37.pyc
+│   │   └── model.cpython-37.pyc
+│   ├── data
+│   │   ├── __init__.py
+│   │   ├── all_elm_rule.json
+│   │   ├── generate.py
+│   │   ├── illegal_rule.json
+│   │   ├── illegal_rule_F1.json
+│   │   ├── illegal_rule_F2.json
+│   │   ├── illegal_rule_F3.json
+│   │   ├── legal_rule.json
+│   │   ├── legal_rule_F1.json
+│   │   ├── legal_rule_F2.json
+│   │   └── legal_rule_F3.json
+│   ├── dict.pkl
+│   ├── model.py
+│   ├── rule_fake.json
+│   └── test.py
+├── GA
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   └── repair.cpython-37.pyc
+│   ├── best.png
+│   ├── clear.py
+│   ├── draw_graph.py
+│   ├── evaluate.py
+│   ├── mean.png
+│   ├── point.png
+│   ├── render.py
+│   ├── repair.py
+│   ├── result
+│   │   ├── figure
+│   │   │   ├── iteration0.jpg
+│   │   │   ├── iteration1.jpg
+│   │   │   ├── iteration10.jpg
+│   │   │   ├── iteration11.jpg
+│   │   │   ├── iteration12.jpg
+│   │   │   ├── iteration13.jpg
+│   │   │   ├── iteration14.jpg
+│   │   │   ├── iteration15.jpg
+│   │   │   ├── iteration16.jpg
+│   │   │   ├── iteration17.jpg
+│   │   │   ├── iteration18.jpg
+│   │   │   ├── iteration19.jpg
+│   │   │   ├── iteration2.jpg
+│   │   │   ├── iteration20.jpg
+│   │   │   ├── iteration21.jpg
+│   │   │   ├── iteration22.jpg
+│   │   │   ├── iteration23.jpg
+│   │   │   ├── iteration24.jpg
+│   │   │   ├── iteration25.jpg
+│   │   │   ├── iteration26.jpg
+│   │   │   ├── iteration27.jpg
+│   │   │   ├── iteration28.jpg
+│   │   │   ├── iteration29.jpg
+│   │   │   ├── iteration3.jpg
+│   │   │   ├── iteration30.jpg
+│   │   │   ├── iteration31.jpg
+│   │   │   ├── iteration32.jpg
+│   │   │   ├── iteration33.jpg
+│   │   │   ├── iteration34.jpg
+│   │   │   ├── iteration35.jpg
+│   │   │   ├── iteration36.jpg
+│   │   │   ├── iteration37.jpg
+│   │   │   ├── iteration38.jpg
+│   │   │   ├── iteration39.jpg
+│   │   │   ├── iteration4.jpg
+│   │   │   ├── iteration40.jpg
+│   │   │   ├── iteration41.jpg
+│   │   │   ├── iteration42.jpg
+│   │   │   ├── iteration43.jpg
+│   │   │   ├── iteration44.jpg
+│   │   │   ├── iteration45.jpg
+│   │   │   ├── iteration46.jpg
+│   │   │   ├── iteration47.jpg
+│   │   │   ├── iteration48.jpg
+│   │   │   ├── iteration49.jpg
+│   │   │   ├── iteration5.jpg
+│   │   │   ├── iteration50.jpg
+│   │   │   ├── iteration6.jpg
+│   │   │   ├── iteration7.jpg
+│   │   │   ├── iteration8.jpg
+│   │   │   └── iteration9.jpg
+│   │   ├── json
+│   │   │   └── data.json
+│   │   ├── result(Remark).jpg
+│   │   ├── result.jpg
+│   │   ├── result.txt
+│   │   ├── start(Remark).jpg
+│   │   ├── start.jpg
+│   │   ├── start.txt
+│   │   └── txt
+│   │       ├── iteration0.txt
+│   │       ├── iteration1.txt
+│   │       ├── iteration10.txt
+│   │       ├── iteration11.txt
+│   │       ├── iteration12.txt
+│   │       ├── iteration13.txt
+│   │       ├── iteration14.txt
+│   │       ├── iteration15.txt
+│   │       ├── iteration16.txt
+│   │       ├── iteration17.txt
+│   │       ├── iteration18.txt
+│   │       ├── iteration19.txt
+│   │       ├── iteration2.txt
+│   │       ├── iteration20.txt
+│   │       ├── iteration21.txt
+│   │       ├── iteration22.txt
+│   │       ├── iteration23.txt
+│   │       ├── iteration24.txt
+│   │       ├── iteration25.txt
+│   │       ├── iteration26.txt
+│   │       ├── iteration27.txt
+│   │       ├── iteration28.txt
+│   │       ├── iteration29.txt
+│   │       ├── iteration3.txt
+│   │       ├── iteration30.txt
+│   │       ├── iteration31.txt
+│   │       ├── iteration32.txt
+│   │       ├── iteration33.txt
+│   │       ├── iteration34.txt
+│   │       ├── iteration35.txt
+│   │       ├── iteration36.txt
+│   │       ├── iteration37.txt
+│   │       ├── iteration38.txt
+│   │       ├── iteration39.txt
+│   │       ├── iteration4.txt
+│   │       ├── iteration40.txt
+│   │       ├── iteration41.txt
+│   │       ├── iteration42.txt
+│   │       ├── iteration43.txt
+│   │       ├── iteration44.txt
+│   │       ├── iteration45.txt
+│   │       ├── iteration46.txt
+│   │       ├── iteration47.txt
+│   │       ├── iteration48.txt
+│   │       ├── iteration49.txt
+│   │       ├── iteration5.txt
+│   │       ├── iteration50.txt
+│   │       ├── iteration6.txt
+│   │       ├── iteration7.txt
+│   │       ├── iteration8.txt
+│   │       └── iteration9.txt
+│   └── run.py
+├── LevelGenerator
+│   ├── GAN
+│   │   ├── Destroyed
+│   │   │   ├── lv0.jpg
+│   │   │   ├── lv0.txt
+│   │   │   ├── lv1.jpg
+│   │   │   ├── lv1.txt
+│   │   │   ├── lv2.jpg
+│   │   │   ├── lv2.txt
+│   │   │   ├── lv3.jpg
+│   │   │   ├── lv3.txt
+│   │   │   ├── lv4.jpg
+│   │   │   └── lv4.txt
+│   │   ├── __pycache__
+│   │   │   └── dcgan.cpython-37.pyc
+│   │   ├── dcgan.py
+│   │   ├── generate_level.py
+│   │   └── generator.pth
+│   ├── RandomDestroyed
+│   │   ├── generate.py
+│   │   ├── lv0.jpg
+│   │   ├── lv0.txt
+│   │   ├── lv1.jpg
+│   │   ├── lv1.txt
+│   │   ├── lv2.jpg
+│   │   ├── lv2.txt
+│   │   ├── lv3.jpg
+│   │   ├── lv3.txt
+│   │   ├── lv4.jpg
+│   │   ├── lv4.txt
+│   │   ├── lv5.jpg
+│   │   ├── lv5.txt
+│   │   ├── lv6.jpg
+│   │   ├── lv6.txt
+│   │   ├── lv7.jpg
+│   │   ├── lv7.txt
+│   │   ├── lv8.jpg
+│   │   ├── lv8.txt
+│   │   ├── lv9.jpg
+│   │   └── lv9.txt
+│   └── __init__.py
+├── LevelText
+│   ├── MarioBrother2
+│   │   ├── SuperMarioBros2(J)-World1-1.txt
+│   │   ├── SuperMarioBros2(J)-World1-2.txt
+│   │   ├── SuperMarioBros2(J)-World1-3.txt
+│   │   ├── SuperMarioBros2(J)-World2-1.txt
+│   │   ├── SuperMarioBros2(J)-World2-2.txt
+│   │   ├── SuperMarioBros2(J)-World2-3.txt
+│   │   ├── SuperMarioBros2(J)-World3-3.txt
+│   │   ├── SuperMarioBros2(J)-World4-1.txt
+│   │   ├── SuperMarioBros2(J)-World4-3.txt
+│   │   ├── SuperMarioBros2(J)-World5-2.txt
+│   │   ├── SuperMarioBros2(J)-World6-1.txt
+│   │   ├── SuperMarioBros2(J)-World6-3.txt
+│   │   ├── SuperMarioBros2(J)-WorldA-1.txt
+│   │   ├── SuperMarioBros2(J)-WorldA-3.txt
+│   │   ├── SuperMarioBros2(J)-WorldB-1.txt
+│   │   ├── SuperMarioBros2(J)-WorldB-3.txt
+│   │   └── SuperMarioBros2(J)-WorldC-2.txt
+│   ├── __init__.py
+│   └── pipes.txt
+├── README.md
+├── __init__.py
+├── __pycache__
+│   ├── root.cpython-36.pyc
+│   └── root.cpython-37.pyc
+├── root.py
+├── test.py
+└── utils
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-36.pyc
+    │   ├── level_process.cpython-36.pyc
+    │   ├── level_process.cpython-37.pyc
+    │   └── visualization.cpython-37.pyc
+    ├── level_process.py
+    └── visualization.py
+
+21 directories, 219 files
