@@ -45,13 +45,16 @@ Requirments to run this project and the tested version are as follow:
 The generated data and trained model is given in this project. You can run the repairer and visualise the results directly by the following steps.
 * **Run GA to repair level**: Run ***GA/run.py*** to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
 
-```python GA/run.py```
-
 ```python GA/clear.py```
+```python GA/run.py```
 
 * **Result Visulization:** Run ***draw_graph.py*** to draw the graph from repair results. Run ***evaluate.py*** to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. What's more, you can run "render.py" to see the visuliized repair progress.
 
-```python draw_graph.py```
+```python GA/draw_graph.py```
+
+```python GA/evaluate.py```
+
+```python GA/render.py```
 
 ### Start from the very beginning (data generation, model training)
 * **Generate Data for CNet**: 
@@ -74,13 +77,17 @@ The generated data will be located in the folder ***./CNet/data/***.
 
 * **Run GA to repair level**: Run ***GA/run.py*** to repair a defective level. The best invidivual at each epoch will be saved as an image in "*GA/result*" folder. In addition, you can run "*GA/clear.py*" to clean up the old results.
 
-```python GA/run.py```
-
 ```python GA/clear.py```
+
+```python GA/run.py```
 
 * **Result Visulization:** Run ***draw_graph.py*** to draw the graph from repair results. Run ***evaluate.py*** to see how many true(wrong) tiles was changed to true(wrong) tiles after repair. What's more, you can run "render.py" to see the visuliized repair progress.
 
-```python draw_graph.py```
+```python GA/draw_graph.py```
+
+```python GA/evaluate.py```
+
+```python GA/render.py```
 
 
 
