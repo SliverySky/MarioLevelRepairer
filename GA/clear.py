@@ -1,6 +1,6 @@
-import os
+import os, sys
 import shutil
-
+os.chdir(sys.path[0])
 
 def del_file(path):
     shutil.rmtree(path)
