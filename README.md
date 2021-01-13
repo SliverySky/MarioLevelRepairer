@@ -31,6 +31,9 @@ Requirments to run this project and the tested version are as follow:
 
 * pygame (2.0.1)
 
+* matplotlib (3.3.2)
+
+
 ## Project structure
 * **Assets/Tiles**: contains resources to render the level
 * **CNET** folder: contains codes about CNet	* **CNET** folder: contains codes about CNet
