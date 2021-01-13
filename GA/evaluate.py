@@ -18,6 +18,7 @@ class Identify:
                 self.mp[keyv] = 1
 
     def compare(self, before, after):
+        print('compare:',before,after)
         with open(before) as f:
             strlv = f.read()
             before = numpy_level(strlv)

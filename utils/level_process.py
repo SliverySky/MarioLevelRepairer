@@ -39,8 +39,10 @@ def getRuleData():
                                 flag = True
                 whole_level.append(map_dic[data[i][j]])
                 if flag: rule_set.add(tuple(whole_level))
-    with open(rootpath+"/CNet/data/legal_rule.json", "w") as f:
+    path = rootpath+"/CNet/data/legal_rule.json"
+    with open(path, "w") as f:
         json.dump(list(rule_set), f)
+        print('generate ',path)
 
 def getAllElmRuleData():
     names = []
@@ -68,9 +70,10 @@ def getAllElmRuleData():
                             whole_level.append(map_dic[data[ni][nj]])
                 whole_level.append(map_dic[data[i][j]])
                 rule_set.add(tuple(whole_level))
-    with open('all_elm_rule.json', "w") as f:
+    path = rootpath+"/CNet/data/all_elm_rule.json"
+    with open(path, "w") as f:
         json.dump(list(rule_set), f)
-
+        print('generate ',path)
 def convert(ch):
     return map_dic[ch]
 

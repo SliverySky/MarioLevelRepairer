@@ -61,3 +61,4 @@ if __name__ == '__main__':
     drawPointGraph(1)
     drawPic2(1, True)
     drawPic2(1, False)
+    print('figures are saved in GA folder.')

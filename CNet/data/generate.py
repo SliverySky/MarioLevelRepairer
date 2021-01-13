@@ -2,7 +2,7 @@ import sys,os
 sys.path.append(sys.path[0]+'/..'+'/..')
 os.chdir(sys.path[0])
 import random
-from utils.level_process import getRuleData
+from utils.level_process import *
 import json
 def random_change(data, change_n):
     res = data.copy()
@@ -24,8 +24,10 @@ def generate_illegal():
             if i not in rule_set[e]:
                 fake_level.append(list(e) + [i])
                 cnt[i] += 1
-    with open('illegal_rule.json', "w") as f:
+    path = 'illegal_rule.json'
+    with open(path, "w") as f:
         json.dump(fake_level, f)
+        print('generate ',path)
 def generate_fake(name, change_n):
     rule_level = json.load(open(name+".json"))
     rule_set = set()
@@ -38,11 +40,14 @@ def generate_fake(name, change_n):
         while tuple(data_f) in rule_set:
             data_f = random_change(i[0:9], change_n)
         res.append(data_f + [i[9]])
-    with open(name+'_F' + str(change_n) + '.json', "w") as f:
+    path = name+'_F' + str(change_n) + '.json'
+    with open(path, "w") as f:
         json.dump(res, f)
+        print('generate ',path)
 if __name__ == '__main__':
     getRuleData() # generate legal_rule.json
     generate_illegal() # generate illegal_rule.json
+    getAllElmRuleData()
     for i in range(1,4):
         generate_fake('legal_rule', i)
         generate_fake('illegal_rule', i)

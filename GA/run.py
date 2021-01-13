@@ -4,11 +4,13 @@ from GA.repair import *
 
 
 if __name__ == '__main__':
-    render_path = rootpath + "//GA//real_time_renderer.py"
     net_name = rootpath + "//CNet//dict.pkl"
     lv_name = rootpath + "//LevelGenerator//RandomDestroyed//lv" + str(0) + ".txt"
     result_path = rootpath + "//GA//result"
     lv = ""
+    print('repair lv:',lv_name)
+    print('used CNet:',net_name)
+    print('saved path:',result_path)
     for e in open(lv_name).readlines():
         lv = lv + e
     lv = numpy_level(lv)

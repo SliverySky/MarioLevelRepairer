@@ -17,3 +17,4 @@ if __name__ == '__main__':
         with open('lv'+str(i)+'.txt', 'w') as f:
             f.write(arr_to_str(new_lv))
         saveLevelAsImage(new_lv, 'lv' + str(i))
+        print('Defective levels are saved in LevelGenerator//RandomDestroyed folder.')

@@ -55,4 +55,4 @@ if __name__ == '__main__':
         print('lv'+str(i)+': cnt=', str(lvs[i][0]))
         cnt_sum += lvs[i][0]
     print('avg_broken_pipe_combinations=', cnt_sum / total)
-
+    print('Defective levels are saved in LevelGenerator//GAN//Destroyed folder.')
