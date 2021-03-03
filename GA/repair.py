@@ -88,11 +88,11 @@ def select(pop, children):
             tmp = int(random.random() * len(big))
             if tmp != i:
                 if big[i]['fit'] < big[tmp]['fit']:
-                    big[i]['RRT'] -= 1
+                    big[i]['RRT'] += 1
                 else:
-                    big[tmp]['RRT'] -= 1
+                    big[tmp]['RRT'] += 1
                 cnt += 1
-    big.sort(key=lambda x: x['RRT'])
+    big.sort(key=lambda x: x['RRT'], reverse=True)
     big = big[:Lamda]
     return big
 
@@ -104,8 +104,7 @@ def inmap(i, j):
         return False
 
 def update_probility(pop):
-    # sty sort
-    pop.sort(key=lambda x: x['fit'])
+    pop.sort(key=lambda x: x['fit'], reverse = True)
     total = (1 + len(pop)) * len(pop) / 2
     for i in range(len(pop)):
         pop[i]['p'] = (i + 1) / total
